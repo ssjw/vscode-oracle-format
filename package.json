@@ -2,7 +2,7 @@
   "name": "vscode-oracle-format",
   "displayName": "oracle-format",
   "description": "PL/SQL formatter (using SQLcl)",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "publisher": "mp",
   "engines": {
     "vscode": "^1.44.0"
@@ -44,6 +44,30 @@
           "default": null,
           "required": false,
           "description": "SQLDeveloper formatter rules (.xml)"
+        },
+        "oracle-format.useTrivadisFormatter": {
+          "type": "boolean",
+          "default": false,
+          "required": false,
+          "description": "Set to true to use the Trivadis formatter and rules. See: https://github.com/Trivadis/plsql-formatter-settings. You must clone or download the Trivadis/plsql-formatter-settings repo and set the TrivadisFormatterFormatScript setting."
+        },
+        "oracle-format.trivadisFormatScript": {
+          "type": "string",
+          "default": null,
+          "required": false,
+          "description": "Path to the Trivadis sqlcl/format.js Javascript file included in the https://github.com/Trivadis/plsql-formatter-settings GitHub repo. Beware of spaces in the path."
+        },
+        "oracle-format.trivadisXml": {
+          "type": "string",
+          "default": null,
+          "required": false,
+          "description": "The SQLDeveloper advanced formatting rules to use for the Trivadis formatter. Values are 'default' to use the default advanced settings included with SQLcl, 'embedded' to use the advanced settings included in the Trivadis format.js script, a file path to a SQLDeveloper advanced settings XML file, or null to use the Trivadis advanced settings (which are different than the advanced settings embedded in the format.js script). The default value is null (not 'default') which will use the Trivadis advanced settings. Beware spaces in the path."
+        },
+        "oracle-format.trivadisArbori": {
+          "type": "string",
+          "default": null,
+          "required": false,
+          "description": "The Arbori program to use for custom format settings. Values are 'default' to use the default Arbori program included in SQLcl, a file path to a file containing an Arbori program for custom format settings, or null to use the Trivadis Arbori program for custom format settings. The default value is null. Beware spaces in the path."
         },
         "oracle-format.languages": {
           "type": "array",

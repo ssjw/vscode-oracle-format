@@ -17,6 +17,14 @@ Works with `Format Document`, `Format Selection` commands and `editor.formatOnSa
 "oracle-format.rules": "/absolute/path/to/style.xml"
 // (Optional) Change languages associated with formatter
 "oracle-format.languages": ["plsql" , "oraclesql"]
+// (Optional) Use the Trivadis advanced formatting.
+"oracle-format.useTrivadisFormatter": true
+// (Optional) Path the to Trivadis format.js Javascript file.
+"oracle-format.trivadisFormatScript": "/absolute/path/to/format.js"
+// (Optional) Path to a custom advanced formatter settings XML.
+"oracle-format.trivadisXml": "/absolute/path/to/formatter.xml"
+// (Optional) Path to a custom Arbori script.
+"oracle-format.trivadisArbori": "/absolute/path/to/formatscript.arbori"
 ```
 
 To reference a relative path inside your workspace use "${workspaceFolder}" variable:
@@ -40,6 +48,7 @@ then you need to increase the VS Code default timeout option as formatting can t
 
 - Oracle SQLcl
 - [Language PL/SQL](https://marketplace.visualstudio.com/items?itemName=xyz.plsql-language) or [Oracle Developer Tools for VS Code](https://marketplace.visualstudio.com/items?itemName=Oracle.oracledevtools)
+- (optional) [Trivadis PL/SQL & SQL Formatter Settings](https://github.com/Trivadis/plsql-formatter-settings)
 
 ## Note
 The output from SQLcl command is printed to Output channel ("oracle-format").
